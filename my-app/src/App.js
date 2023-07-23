@@ -19,6 +19,27 @@ export const App = () => {
 	const reset = () => {
 		setInputWindow(String(''));
 	};
+	const bplus = (
+		<button className={styles.button} onClick={plus}>
+			+
+		</button>
+	);
+	const bminus = (
+		<button className={styles.button} onClick={minus}>
+			-
+		</button>
+	);
+	const breset = (
+		<button className={styles.button} onClick={reset}>
+			C
+		</button>
+	);
+	const bresult = (
+		<button className={styles.button} onClick={result}>
+			=
+		</button>
+	);
+	const buttons = [bplus, bminus, breset, bresult];
 	return (
 		<div className={styles.app}>
 			<input
@@ -38,18 +59,11 @@ export const App = () => {
 					</li>
 				))}
 			</ul>
-			<button className={styles.button} onClick={plus}>
-				+
-			</button>
-			<button className={styles.button} onClick={minus}>
-				-
-			</button>
-			<button className={styles.button} onClick={reset}>
-				C
-			</button>
-			<button className={styles.button} onClick={result}>
-				=
-			</button>
+			<ul className={styles.ulButtons}>
+				{buttons.map((value, id) => (
+					<li key={id}>{value}</li>
+				))}
+			</ul>
 		</div>
 	);
 };

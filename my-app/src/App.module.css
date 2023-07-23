@@ -55,6 +55,17 @@ ul:hover {
 	cursor: pointer;
 }
 
+.ulButtons {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	list-style: none;
+}
+
+.ulButtons:hover {
+	cursor: pointer;
+}
+
 ::placeholder {
 	color: white;
 }
